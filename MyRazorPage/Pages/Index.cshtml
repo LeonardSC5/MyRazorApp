@@ -1,0 +1,32 @@
+﻿@page
+@model MyRazorPage.Pages.IndexModel
+
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <title></title>
+    </head>
+    <body>
+        <div>
+            @foreach(var category in Model.Categories)
+            {
+            <table>
+                <thead>
+                    <tr>
+                        <td>@category.Id</td>
+                        <td>@category.Title</td>
+                        <td>@category.Price</td>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td></td>
+                    </tr>
+                </tbody>
+            </table>
+        }
+        </div>
+    </body>
+</html>
+
