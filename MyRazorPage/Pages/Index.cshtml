@@ -1,5 +1,7 @@
 ﻿@page
+@using System.Globalization
 @model MyRazorPage.Pages.IndexModel
+@addTagHelper *, Microsoft.AspNetCore.Mvc.TagHelpers
 
 <!DOCTYPE html>
 
@@ -9,14 +11,15 @@
     </head>
     <body>
         <div>
-            @foreach(var category in Model.Categories)
-            {
+            // TagHelper
+            <partial name="Shared/NavMenuPartial" />
+             <h1>Categorias</h1>
             <table>
                 <thead>
                     <tr>
-                        <td>@category.Id</td>
-                        <td>@category.Title</td>
-                        <td>@category.Price</td>
+                        <td>Id</td>
+                        <td>Title</td>
+                        <td>Price</td>
                     </tr>
                 </thead>
                 <tbody>
@@ -25,8 +28,7 @@
                     </tr>
                 </tbody>
             </table>
-        }
-        </div>
+         </div>
     </body>
 </html>
 
